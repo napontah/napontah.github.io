@@ -1,65 +1,130 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Napontah.github.io by napontah</title>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru-RU" lang="ru-RU">
+<head>
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
+  <meta charset="utf-8" />
+  <meta name="Author" content="Kamil Hismatullin" />
+  <meta name="viewport" content="width=1024" />
+  <meta name="Description" content="На понтах - пишем вконтакте с яблочком Apple." />
+
+  <title>На понтах с яблочком</title>
+
+  <link rel="shortcut icon" href="images/favicon.png" >
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+  <link rel="stylesheet" href="styles/main.css" />
+
+  <!-- social -->
+  <script type="text/javascript" src="http://vk.com/js/api/share.js?86" charset="windows-1251"></script>
+  <!-- social -->
+</head>
+<body>
+
+  <div id="main">
+    <nav id="top">
+      <h2>
+        <a href="#">
+          <img src="images/logo.png" width="160" height="26" alt="На понтах" />
+        </a>
+      </h2>
+      <ul>
+        <li><a href="#about">Что это такое</a></li>
+        <li><a href="#how-use">Как мне стать крутым перцем</a></li>
+        <li class="menu-button"><a href="#">Загрузить</a></li>
+      </ul>
+    </nav>
+
+    <div class="content" id="content">
       <header>
-        <h1>Napontah.github.io</h1>
-        <p></p>
+        <div class="header-description">
+          <img class="header-description-text" src="images/header-description.png" alt="Будь круче. Пиши вконтакте с яблочком. Даже если у тебя нет IPhone.">
+          <a href="#" class="header-install-button">
+            <span>Установить для Google Chrome <img src="images/chrome_logo_2x.png"></span>
+          </a>
+          <div class="social">
+            <div class="social-wrap">
+              <div id="vk_like">
+                <script type="text/javascript"><!--
+                  document.write(VK.Share.button({
+                    url: 'http://napontah.ru',
+                    title: 'Хороший сайт',
+                    description: 'Это мой собственный сайт, я его очень долго делал',
+                    image: 'http://mysite.com/mypic.jpg',
+                    noparse: true
+                  }));
+                --></script>
+              </div>
+              <div id="twitter_share">
+                <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://napontah.ru" data-text="Пишем вконтакте с яблочком" data-lang="ru"></a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+              </div>
+            </div>
+          </div>
+        </div>
 
-
-        <p class="view"><a href="https://github.com/napontah">View My GitHub Profile</a></p>
-
+        <img class="header-macbook" src="images/macbook.png">
       </header>
-      <section>
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+      <section id="about">
+        <p>
+          Ты наверно замечал, что счастливые обладатели устройств Apple могут публиковать записи с иконочкой яблочка. Такие записи обычно собирают много лайков и комментариев, а символ яблочка выступает показателем престижности и крутости автора. Но что, если человек не желает покупать устройство за овер 20 кусков, но хочет выглядеть круче?
+          <br>
+          <br>
+          Мы постарались исправить эту несправедливость!
+          <br>
+          <br>
+          На понтах™ - это расширение для браузера Chrome, позволяющее писать в социальной сети ВКонтакте записи помеченные яблочком!
+        </p>
       </section>
-      <footer>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
+
+      <section id="how-use">
+        <ul>
+          <li>
+            <h1>Установка</h1>
+            <p>Установи расширение прямо с этого сайта или из интернет-магазина Chrome.</p>
+          </li>
+          <li>
+            <h1>Использование</h1>
+            <p><img src="images/using.gif" class="using">Заходи в вк, придумай что-нибудь умное или сделай гламурную фоточку и отправляй всё это добро к себе на стенку. До того как нажать на кнопочку "Отправить", убедись в том, что иконка яблочка рядом с этой кнопкой светится, а если она серая, то просто нажми на неё.</p>
+          </li>
+          <li>
+            <h1>Что дальше</h1>
+            <p>Наслаждайся эффектом. Теперь твои записи и фотки будут "лайкать" чаще и у тебя появится много новых друзей, ведь для них ты - крутой чел с айфоном и пофиг на то, что его никто не видел, главное что ты публикуешь свои записи с яблочком!</p>
+          </li>
+        </ul>
+      </section>
+
+      <aside id="contacts">
+        <div class="wufoo">
+          <div class="contact-header">
+            <div class="icon"></div>
+            <div class="title">Связаться с разработчиком</div>
+          </div>
+          <div class="clear"></div>
+          <div class="contact-form">
+            <form name="contact_form" enctype="multipart/form-data" method="post" action="https://kamilhism.wufoo.com/forms/q7x2x3/#public" target="_blank" >
+              <span>
+                <input id="contact-email" name="Field8" type="email" spellcheck="false" placeholder="Адрес электронной почты" value="" maxlength="255" required />
+              </span>
+              <span>
+                <textarea id="contact-message" name="Field7" spellcheck="true" placeholder="Текст сообщения" ></textarea>
+              </span>
+              <div>
+                <input id="contact-submit" name="saveForm" type="submit" value="Отправить" />
+                <p id="social-description">либо напиши в паблике приложения в <a href="http://vk.com/napontah_vk" target="_blank"><img src="images/vk_button.png" alt="контактике"></a> или зафоловь в <a href="https://twitter.com/NaPontah_vk" target="_blank"><img src="images/twitter_button.png" alt="твиттере"></a></p>
+              </div>
+              <input type="hidden" name="idstamp" value="tzO6GKbxKVP0AV7NN3sUNXwRYGDqmupF+cDcDZXm938=" />
+            </form>
+          </div>
+
+        </div>
+      </aside>
+      <div class="copyright">
+        <p>Copyright © 2013 Kamil Hismatullin. Site design inspired by <a href="http://www.apple.com/" target="_blank">Apple</a> in California. Assembled in Russia.</p>
+      </div>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
-  </body>
+
+  </div>
+
+</body>
 </html>
