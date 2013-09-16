@@ -5,12 +5,13 @@
   <meta charset="utf-8" />
   <meta name="Author" content="Kamil Hismatullin" />
   <meta name="viewport" content="width=1024" />
-  <meta name="Description" content="На понтах - пишем вконтакте с яблочком Apple." />
+  <meta name="Description" content="Ты наверно замечал, что счастливые обладатели устройств Apple могут публиковать в ВКонтакте записи с иконочкой яблочка. Так вот, приложение На понтах™ позволяет делать это любому человеку, даже если у него нету айфона!" />
 
-  <title>На понтах с яблочком</title>
+  <title>На понтах - приложение для модных людей :D</title>
 
   <link rel="shortcut icon" href="images/favicon.png" >
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="image_src" href="images/for_vk_share.png">
 
   <link rel="stylesheet" href="styles/main.css" />
 
@@ -45,17 +46,11 @@
             <div class="social-wrap">
               <div id="vk_like">
                 <script type="text/javascript"><!--
-                  document.write(VK.Share.button({
-                    url: 'http://napontah.ru',
-                    title: 'Хороший сайт',
-                    description: 'Это мой собственный сайт, я его очень долго делал',
-                    image: 'http://mysite.com/mypic.jpg',
-                    noparse: true
-                  }));
+                document.write(VK.Share.button(false,{type: "round", text: "Поделится"}));
                 --></script>
               </div>
               <div id="twitter_share">
-                <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://napontah.ru" data-text="Пишем вконтакте с яблочком" data-lang="ru"></a>
+                <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://napontah.ru" data-hashtags="napontah_vk" data-text="Приложение На понтах™ позволяет публиковать в ВКонтакте записи с иконочкой яблочка! Без IPhone." data-lang="ru"></a>
                 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
               </div>
             </div>
