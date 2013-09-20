@@ -15,6 +15,10 @@
 
   <link rel="stylesheet" href="styles/main.css" />
 
+  <!-- inline installation -->
+  <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/fibcoeahjhaiemkadpacopepbdfnjhfh">
+  <!-- inline installation -->
+
   <!-- social -->
   <script type="text/javascript" src="http://vk.com/js/api/share.js?86" charset="windows-1251"></script>
   <!-- social -->
@@ -42,7 +46,7 @@
       <ul>
         <li><a href="#about">Что это такое</a></li>
         <li><a href="#how-use">Как мне стать крутым перцем</a></li>
-        <li class="menu-button"><a href="#">Загрузить</a></li>
+        <li class="menu-button"><a href="https://chrome.google.com/webstore/detail/fibcoeahjhaiemkadpacopepbdfnjhfh" target="_blank">Загрузить</a></li>
       </ul>
     </nav>
 
@@ -50,7 +54,7 @@
       <header>
         <div class="header-description">
           <img class="header-description-text" src="images/header-description.png" alt="Будь круче. Пиши вконтакте с яблочком. Даже если у тебя нет IPhone.">
-          <a href="#" class="header-install-button">
+          <a href="#" class="header-install-button" onclick="try { chrome.webstore.install() } catch(e) { alert('Чтобы писать с яблочком, вам нужен браузер, работающий на основе Chromium') }">
             <span>Установить для Google Chrome <img src="images/chrome_logo_2x.png"></span>
           </a>
           <div class="social">
