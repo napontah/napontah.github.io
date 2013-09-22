@@ -19,6 +19,74 @@
   <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/fibcoeahjhaiemkadpacopepbdfnjhfh">
   <!-- inline installation -->
 
+  <!-- for mentions -->
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      $.ajax(
+        {
+          url: 'https://api.github.com/gists/6e2d35a3a72922334cb4',
+          type: 'GET',
+          dataType: 'jsonp'
+        }
+      ).success(
+        function(gistdata) {
+          var reviews = gistdata.data.files;
+          for (review in reviews) {
+            var author = review;
+            var content = reviews[author].content;
+            var author_link = '';
+            if (content.split('>').length > 1) {
+              author_link = '<a href="' + content.split('>')[1] + '" target="_blank">';
+              author += '</a>';
+              content = content.split('>')[0];
+            }
+            $('#reviews ul').append('<li><div class="review"><p class="text">' + content + '</p><p class="author">' + author_link + author + '</p></div></li>')
+          }
+          activateCarousel();
+        }
+      ).error(function(e) {
+        // ajax error
+      });
+    });
+    function activateCarousel() {
+      $('.loader').hide();
+      $('.carousel').show();
+      var run = setInterval('switchCarousel(1)', 5000);
+      $('.next').click(function() {
+        switchCarousel(1);
+      });
+      $('.prev').click(function() {
+        switchCarousel(-1);
+      });
+      $('#reviews').hover(
+        function() {
+          clearInterval(run);
+        },
+        function() {
+          run = setInterval('switchCarousel(1)', 5000);
+        }
+      );
+    }
+    function switchCarousel (count) {
+      var reviews = $('#reviews ul li'), currentReview = $('#reviews ul li.selected');
+
+      var selectedIndex = reviews.index(currentReview) + count;
+      if (selectedIndex >= reviews.length)
+        selectedIndex = 0;
+      if (selectedIndex < 0)
+        selectedIndex = reviews.length - 1;
+
+      currentReview.hide(200);
+      currentReview.removeClass('selected');
+
+      var selectedReview = $(reviews.get(selectedIndex));
+      selectedReview.show(400);
+      selectedReview.addClass('selected');
+    }
+  </script>
+  <!-- for mentions -->
+
   <!-- social -->
   <script type="text/javascript" src="http://vk.com/js/api/share.js?86" charset="windows-1251"></script>
   <!-- social -->
@@ -102,6 +170,25 @@
             <p>Наслаждайся эффектом. Теперь твои записи и фотки будут "лайкать" чаще и у тебя появится много новых друзей, ведь для них ты - крутой чел с айфоном и пофиг на то, что его никто не видел, главное что ты публикуешь свои записи с яблочком!</p>
           </li>
         </ul>
+      </section>
+
+      <section id="reviews">
+        <p>Вот что думают наши пользователи:</p>
+        <div class="loader"><img src="images/ajax-loader.gif"></div>
+        <div class="carousel">
+          <img class="prev" src="images/arrow_left.png" width="30px">
+          <ul>
+            <li class="selected">
+              <div class="review">
+                <p class="text">Ви таки гений! До этого приложения я был полным лузером, ни одна тян не хотела разговаривать со мной. Но теперь, когда появилось Ваше приложение моя личная жизнь резко наладилась! Спасибо Вам за это, дай Вам б-г здоровья!</p>
+                <p class="author">RandomNerd@mail.ru</p>
+              </div>
+            </li>
+          </ul>
+          <img class="next" src="images/arrow_right.png" width="30px">
+        </div>
+        <div class="clear"></div>
+        <p>Оставь и ты отзыв!</p>
       </section>
 
       <aside id="contacts">

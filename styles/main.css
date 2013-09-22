@@ -191,7 +191,7 @@ body {
   color: #666;
   text-align: center;
 }
-#how-use {  border-top: 1px solid #e6e6e6 }
+#how-use, #reviews {  border-top: 1px solid #e6e6e6 }
 #how-use ul {  list-style: none outside }
 #how-use ul li {
   display: inline-table;
@@ -292,6 +292,9 @@ aside {  padding: 25px 0 }
   height: 32px;
   vertical-align: middle;
 }
+#social-description a {
+  text-decoration: none !important;
+}
 .copyright {
   clear: both;
   width: 100%;
@@ -301,6 +304,9 @@ aside {  padding: 25px 0 }
   font-size: 10px;
   text-align: left !important;
   padding-bottom: 36px;
+}
+.copyright a {
+  color: #888;
 }
 #twitter_share,
 #vk_like {  display: inline-block }
@@ -312,4 +318,49 @@ aside {  padding: 25px 0 }
 .social-wrap {
   float: right;
   margin-right: -40px;
+}
+
+#reviews ul {
+  float: left;
+  width: 89%;
+  list-style: none outside;
+  height: 50px;
+}
+#reviews li {
+  display: none;
+  width: 100%;
+}
+#reviews li:first-child {
+  display: inline-block;
+}
+#reviews .review .text {
+  text-align: center;
+  color: #666;
+}
+#reviews .review .author {
+  text-align: right;
+  padding-right: 20px;
+  color: #999;
+}
+#reviews .review .author a {
+  color: #999;
+}
+#reviews img {
+  cursor: pointer;
+  padding-top: 30px;
+}
+#reviews img:hover {
+  opacity: 0.5;
+}
+#reviews .prev {
+  float: left;
+}
+#reviews .next {
+  float: right;
+}
+#reviews .carousel {
+  display: none;
+}
+#reviews .loader {
+  text-align: center;
 }
